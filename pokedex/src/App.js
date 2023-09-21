@@ -1,16 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Pokedex from "./components/Pokedex";
-import PokemonDetails from "./components/PokemonDetails";
-
+import "./styles.css";
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Pokedex} />
-        <Route path="/pokemon/:id" component={PokemonDetails} />
-      </Switch>
-    </Router>
+    <div className="App">
+      <h1>Pokédex</h1>
+      <Pokedex />
+    </div>
   );
 }
 
