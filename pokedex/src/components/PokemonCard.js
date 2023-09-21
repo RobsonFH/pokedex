@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import PokemonDetails from "./PokemonDetails";
 
 function PokemonCard({ pokemon }) {
-  const [showDetails, setShowDetails] = useState(false);
+  const [mostrarDetalhes, setMostrarDetalhes] = useState(false);
 
-  const toggleDetails = () => {
-    setShowDetails(!showDetails);
+  const alternarDetalhes = () => {
+    setMostrarDetalhes(!mostrarDetalhes);
   };
 
   return (
-    <div className="pokemon-card" onClick={toggleDetails}>
-      <img src={pokemon.image} alt={pokemon.name} />
-      <h3>{pokemon.name}</h3>
-      {showDetails && <PokemonDetails pokemon={pokemon} />}
+    <div className="pokemon-card" onClick={alternarDetalhes}>
+      <img src={pokemon.imagem} alt={pokemon.nome} />
+      <h3>{pokemon.nome}</h3>
+      {mostrarDetalhes && <PokemonDetails pokemon={pokemon} />}
     </div>
   );
 }

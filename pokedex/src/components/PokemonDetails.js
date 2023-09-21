@@ -3,9 +3,9 @@ import React from "react";
 function PokemonDetails({ pokemon }) {
   return (
     <div className="pokemon-details">
-      <h2>{pokemon.name}</h2>
-      <p>Type: {pokemon.type}</p>
-      <p>Description: {pokemon.description}</p>
+      <h2>{pokemon.nome}</h2>
+      <p>Tipo: {pokemon.tipo}</p>
+      <p>Descrição: {pokemon.descricao}</p>
     </div>
   );
 }
